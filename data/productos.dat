@@ -1,0 +1,21 @@
+
+d_productos = {1:'',
+               2:'',
+               3:'',
+               4:'',
+               5:''}
+
+
+CODPROD;DESCPROD;VALORUNIT
+
+001;Arroz 5kg;20000
+002;Aceite vegetal 1L;12000
+003;Azúcar 1kg;5500
+004;Leche en polvo 500g;9500
+005;Café molido 250g;15000
+
+d_productos = {CODCLI:'001',
+               CODCLI:'002',
+               3:'',
+               4:'',
+               5:''}
