@@ -1,30 +1,29 @@
 from interfaz.menu import menu
-from modelo.modelo import insertar, consultar
-# from persistencia.persistencia import cargar
-
+from modelo.modelo import cargar_datos, imprimir_factura, resumen_cliente_mes, diagrama_facturacion_anio, productos_comunes
 
 # Programa principal
 print("-" * 40)
 print("-------------- BILLIFY ACME ------------")
+print("-" * 40)
 
-
-
-# billify = {}
-# archivo = "data\productos.dat"
-# billify = cargar(archivo)
+# Cargar datos al inicio
+try:
+    productos, clientes, ventas = cargar_datos()
+except Exception as e:
+    print(f"Error al cargar datos: {e}")
+    input("Presione cualquier tecla para salir...")
+    exit()
 
 while True:
     op = menu()
-    match op:
-        case 1:
-            billify = insertar(billify, )
-        case 2:
-            consultar(billify)
-        case 3:
-            pass
-            #informes()
-        case 4:
-            print("\nEstamos en mejoras constantes. ")
-            print("")
-            print("\nGracias por usar el software. \n")
-            break
+    if op == 1:
+        imprimir_factura(ventas, productos, clientes)
+    elif op == 2:
+        resumen_cliente_mes(ventas, productos, clientes)
+    elif op == 3:
+        diagrama_facturacion_anio(ventas)
+    elif op == 4:
+        productos_comunes(ventas, productos)
+    elif op == 5:
+        print("\nGracias por usar el software.\n")
+        break

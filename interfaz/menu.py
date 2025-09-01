@@ -1,22 +1,22 @@
 def menu():
-
     while True:
         print("-" * 40)
         print("***************** MENÚ *****************")
-        print("1. Insertar".center(20))
-        print("2. Consultar".center(20))
-        print("3. Informes".center(20))
-        print("4. Salir".center(15))
+        print("1. Imprimir Factura (R1)".center(40))
+        print("2. Resumen Cliente/Mes (R2)".center(40))
+        print("3. Diagrama Facturación Año (R3)".center(40))
+        print("4. Productos Comunes (R4)".center(40))
+        print("5. Salir".center(40))
         print("-" * 40)
-        print(">>> opción: \n", end="")
+        print(">>> Opción: ", end="")
         
         try:
             opcion = int(input())
-            if opcion < 1 or opcion > 4:
+            if opcion < 1 or opcion > 5:
                 print("Error. Opción no válida.")
-                input("Presione cualquier tecla para volver al menu...")
+                input("Presione cualquier tecla para volver al menú...")
                 continue
             return opcion
         except ValueError:
-            print("Error. opción no válida.")
-            input("Presione cualquier tecla para volver al menu...")
+            print("Error. Opción no válida.")
+            input("Presione cualquier tecla para volver al menú...")    

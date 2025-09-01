@@ -1,10 +1,4 @@
 
-d_productos = {1:'',
-               2:'',
-               3:'',
-               4:'',
-               5:''}
-
 
 CODPROD;DESCPROD;VALORUNIT
 
@@ -14,8 +8,4 @@ CODPROD;DESCPROD;VALORUNIT
 004;Leche en polvo 500g;9500
 005;Café molido 250g;15000
 
-d_productos = {CODCLI:'001',
-               CODCLI:'002',
-               3:'',
-               4:'',
-               5:''}
+
